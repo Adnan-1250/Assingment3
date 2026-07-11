@@ -16,10 +16,10 @@ public class Tes_Bike {
            bikeShowroom1.showDetails();
            bikeShowroom2.showDetails();
             System.out.println("===============================Bikes ===========================");
-        Bike bike1=new Bike();  
-        Bike bike2=new Bike("HONDA", "Honad", 45, 560000.0);
-        bike1.showDetails();
-        bike2.showDetails();  
+        Bike bike11=new Bike();  
+        Bike bike22=new Bike("HONDA", "Honad", 45, 560000.0);
+        bike11.showDetails();
+        bike22.showDetails();  
       System.out.println("=======================Electric Bike ===========================");
         ElectricBike electricBike1=new ElectricBike();
         ElectricBike electricBike2=new ElectricBike(234, 3.7, "YAMMA", "YAmma",32,6700.0);
@@ -31,21 +31,25 @@ public class Tes_Bike {
         sportsBike1.showDetails();
         sportsBike2.showDetails();
         System.out.println("===========================================");
-          bike2.addStock(8);
+          bike22.addStock(8);
           System.out.println("--------------------------------");
-        bike2.sellBike(70);
+        bike22.sellBike(70);
         System.out.println("=========================================");
-        Bike[] bikeList = new Bike[8]; 
-        bikeList[1]=new Bike("CD-70", "Road Prince", 56, 67800.0);
-        bikeList[2]=new Bike("CBR 150R", "Zics", 56, 67800.0);
-        bikeList[3]=new Bike("CD-120", "HONDA", 7, 4665.0);
-        bikeList[4]=new Bike("df45", "RYAMMA", 22, 567.0);
-        bikeList[5]=new Bike("CD-90", "Vlektra", 7, 47887.0);
+        Bike[] bikeList = new Bike[5]; 
+        bikeList[0]=new Bike("CD-70", "Road Prince", 56, 67800.0);
+        //bikeList[2]=new Bike("CBR 150R", "Zics", 56, 67800.0);
+        bikeList[1] =new ElectricBike(45, 345.8, "jdfhf", "gfkgjf", 34, 2345.0);
+        bikeList[2]=new Bike("CD-120", "HONDA", 7, 4665.0);
+        //bikeList[3]=new Bike("df45", "RYAMMA", 22, 567.0);
+        bikeList[3]=new SportsBike("Honda", "Honda", 34, 56000.90, 200);
+        bikeList[4]=new Bike("CD-90", "Vlektra", 7, 47887.0);
         for(int i=0;i<bikeList.length;i++){
             bikeList[i].showDetails();
+            System.out.println("============================");
         }
       
-
-    }
+         bikeShowroom2.showAllBiks(bikeList);
     
+    }
+   
 }
